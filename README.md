@@ -133,21 +133,6 @@ adb push bin/estrace /data/local/tmp
 adb shell chmod +x /data/local/tmp/estrace
 ```
 
-# TODO
-
-- 更详细的信息输出
-
-# Thanks
-
-- [ehids/ebpfmanager](https://github.com/ehids/ebpfmanager)
-- [cilium/ebpf](https://github.com/cilium/ebpf)
-- [maiyao1988/ebpf-plugin](https://github.com/maiyao1988/ebpf-plugin)
-- 感谢r0ysue反馈补充的bypass路径
-
-# 交流群
-
-![](./images/Snipaste_2022-12-27_14-06-33.png)
-
 
 
 
