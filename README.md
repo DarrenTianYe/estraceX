@@ -139,6 +139,10 @@ adb shell chmod +x /data/local/tmp/estrace
 遇到的问题
 
 ```
+补充，ubunntu 安装 go：https://www.digitalocean.com/community/tutorials/how-to-install-go-on-ubuntu-20-04
+
+运行报错
+：
 go run github.com/shuLhan/go-bindata/cmd/go-bindata -pkg assets -o "app/assets/ebpf_probe.go" ./app/bytecode/raw_syscalls.o app/config/table64.json app/config/table32.json
 GOARCH=arm64 GOOS=android CGO_ENABLED=1 CC=aarch64-linux-android29-clang go build -ldflags "-w -s -extldflags '-Wl,--hash-style=sysv'" -o bin/estrace .
 error obtaining VCS status: exit status 128
@@ -158,6 +162,8 @@ assets:
 .PHONY: build
 build:
 	GOARCH=arm64 GOOS=android CGO_ENABLED=1 CC=aarch64-linux-android29-clang $(CMD_GO) build -buildvcs=false  -ldflags "-w -s -extldflags '-Wl,--hash-style=sysv'" -o bin/estrace .
+	
+	
 
 ```
 
